@@ -509,10 +509,10 @@
             <label for="user-name" class="mdl-contacts-labels"> Name </label>
             <div class="mdl-input-icon-box">
               <input
-                name="user-name"
+                id="user-name"
                 class="mdl-input-area"
                 type="text"
-                name="contacts"
+                name="user-name"
               />
               <svg class="contacts-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-name"></use>
@@ -522,12 +522,7 @@
           <div class="mdl-contacts-section">
             <label for="tel" class="mdl-contacts-labels"> Phone </label>
             <div class="mdl-input-icon-box">
-              <input
-                name="tel"
-                class="mdl-input-area"
-                type="tel"
-                name="contacts"
-              />
+              <input id="tel" class="mdl-input-area" type="tel" name="tel" />
               <svg class="contacts-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-tel"></use>
               </svg>
@@ -537,26 +532,41 @@
             <label for="email" class="mdl-contacts-labels"> Email </label>
             <div class="mdl-input-icon-box">
               <input
-                name="email"
+                id="email"
                 class="mdl-input-area"
                 type="email"
-                name="contacts"
+                name="email"
               />
               <svg class="contacts-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
           </div>
-          <label class="mdl-contacts-labels"> Comment </label>
-          <textarea
-            class="mdl-input-text"
-            placeholder="Text input"
-            name="contacts"
-          ></textarea>
+          <div class="mdl-contacts-last-section">
+            <label for="user-comment" class="mdl-contacts-labels">
+              Comment
+            </label>
+            <textarea
+              id="user-comment"
+              class="mdl-input-text"
+              placeholder="Text input"
+              name="user-comment"
+            ></textarea>
+          </div>
         </form>
         <div class="terms">
-          <input type="checkbox" name="user-privacy" value="agree-terms" />
+          <input
+            class="true-checkbox visually-hidden"
+            id="user-privacy"
+            type="checkbox"
+            name="user-privacy"
+            value="true"
+          />
           <label for="user-privacy" class="terms-notice">
+            <span class="fake-checkbox"
+              ><svg width="10" height="8">
+                <use href="./images/icons.svg#icon-agree"></use></svg
+            ></span>
             I accept the terms and conditions of the
             <a class="policy">Privacy Policy</a>
           </label>
